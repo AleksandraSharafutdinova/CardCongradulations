@@ -1,0 +1,7 @@
+.image {
+    position: relative;
+    margin: auto;
+    display: flex;
+    box-shadow: 0 0 50px rgba(96, 4, 50, 0.23);
+    font-size: 3px;
+}

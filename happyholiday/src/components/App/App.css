@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+   box-sizing: inherit;
+}
+
+body {
+    font-family: "Calibri Light", sans-serif;
+    background-color: #f1fffc;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
