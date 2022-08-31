@@ -1,21 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import style from './Felicitation.module.css'
+import {textContext} from "../../../context/textContext";
 
 const Felicitation = () => {
-    return (
-        <div className={style.felicitation}>
-            <p>
-                Поздравляю с днем рожденья!
-                Пусть будет жизнь полна веселья,
-                Не будет грусти и хлопот,
-                А только счастье круглый год!
 
-                Желаю творческих успехов,
-                Прекрасных дней, улыбок, смеха.
-                Любви, душевного тепла,
-                Как сказка, чтобы жизнь была!
-            </p>
-        </div>
+    const {text} = useContext(textContext)
+    //console.log(text)
+
+    return (
+        <p className={style.felicitation}>
+            {text}
+        </p>
     )
 };
 
