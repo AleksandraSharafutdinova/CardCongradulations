@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../Header"
 import Footer from "../Footer";
 import './App.css'
@@ -6,6 +6,7 @@ import Card from "../Card";
 import {TextContextProvider} from "../../context/textContext";
 import {ImgContextProvider} from "../../context/imgContext";
 import {HolidayContextProvider} from "../../context/holidayContext";
+import {TestingContextProvider} from "../../context/testingContext";
 
 const wrapper = {
     display: 'flex',
@@ -21,7 +22,9 @@ const App = () => {
                     <TextContextProvider>
                         <Header />
                         <Card />
-                        <Footer />
+                        <TestingContextProvider>
+                            <Footer />
+                        </TestingContextProvider>
                     </TextContextProvider>
                 </ImgContextProvider>
             </HolidayContextProvider>

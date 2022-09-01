@@ -4,30 +4,23 @@ import {holidayContext} from "../../../context/holidayContext";
 
 const Choices = () => {
     const [isOpenChoices, setIsOpenChoices] = useState(false);
-    const [holiday, setHoliday] = useState('Выбрать праздник');
-
-    const hol = useContext(holidayContext)
-    //console.log(hol.smt)
+    const {holiday, holidays, changeHoliday} = useContext(holidayContext);
 
     const toggleChoices = () => {
         setIsOpenChoices(!isOpenChoices)
     };
 
-    const changeHoliday = (title) => {
-        setHoliday(title)
-        toggleChoices();
-    }
-
     return (
         <div className={style.wrapper}>
-            <button className={style.button} onClick={toggleChoices}>{holiday}</button>
+            <button className={style.button} onClick={toggleChoices}>{holidays[holiday] || 'Выбрать праздник'}</button>
             { isOpenChoices && (
                 <ul className={style.list}>
-                    {Object.entries(hol.smt).map(item => (
+                    {Object.entries(holidays).map(item => (
                         <li key={item[0]}
                             className={style.item}
                             onClick={() => {
-                                changeHoliday(item[1])
+                                changeHoliday(item[0]);
+                                toggleChoices();
                             }}>
                             {item[1]}
                         </li>
