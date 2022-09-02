@@ -12,8 +12,12 @@ const Footer = () => {
 
     const {designer, setDesigner} = useContext(testingContext);
     const onClick = () => {
-        setDesigner(prompt('Напиши сюда имя какое-нибудь:', ''))
-    }
+        let item = prompt('Напиши сюда имя какое-нибудь:', '');
+        if (item === '') {
+            return designer;
+        }
+        setDesigner(item);
+    };
 
   return (
       <footer className={style.footer}>
@@ -25,22 +29,22 @@ const Footer = () => {
                       <p onClick={onClick}>© HBCard, 2022</p>
                   </div>
                   <ul className={style.social}>
-                      <li className={style.item}>
+                      <li>
                           <a href='https://vk.com/methed' className={style.link}>
                               <VKIcon />
                           </a>
                       </li>
-                      <li className={style.item}>
+                      <li>
                           <a href='https://t.me/methed_chat_frontend' className={style.link}>
                               <TGIcon />
                           </a>
                       </li>
-                      <li className={style.item}>
+                      <li>
                           <a href='https://pinterest.com' className={style.link}>
                               <PNTIcon />
                           </a>
                       </li>
-                      <li className={style.item}>
+                      <li>
                           <a href='https://stumbleupon.com' className={style.link}>
                               <SMTIcon/>
                           </a>

@@ -4,11 +4,12 @@ import {textContext} from "../../../context/textContext";
 
 const Felicitation = () => {
 
-    const {text} = useContext(textContext)
+    const {text} = useContext(textContext);
+    const texting = 'Мы с удовольствием сгенерируем для Вас поздравление! Для этого просто выберите праздник:)'
 
     return (
         <p className={style.felicitation}>
-            {text}
+            {text ?? texting}
         </p>
     )
 };
