@@ -9,6 +9,7 @@ html {
 body {
     font-family: "Calibri Light", sans-serif;
     background-color: #f1fffc;
+    font-size: 3px;
 }
 
 button {
@@ -33,4 +34,5 @@ ul {
 
 p {
     margin: 0;
+    font-size: 17px;
 }

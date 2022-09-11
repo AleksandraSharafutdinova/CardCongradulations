@@ -29,6 +29,10 @@
     color: white;
 }
 
+.button:disabled {
+    background-color: gray;
+}
+
 @media (max-width: 1024px) {
     .wrapper {
         flex-direction: column;
@@ -45,13 +49,14 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .wrapper {
-        gap: 20px;
-    }
-
+@media (max-width: 768px) {
     .buttons {
         flex-direction: column;
     }
+}
 
+@media (max-width: 480px) {
+    .wrapper {
+        gap: 20px;
+    }
 }
